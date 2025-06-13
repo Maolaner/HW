@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>批改结果</title></head>
+<body>
+<h2>批改结果</h2>
+<table border="1" cellpadding="8">
+<tr><th>题号</th><th>学生答案</th><th>正确答案</th><th>结果</th></tr>
+{% for qnum, student_answer, correct_answer, status in results %}
+<tr>
+    <td>{{ qnum }}</td>
+    <td>{{ student_answer }}</td>
+    <td>{{ correct_answer }}</td>
+    <td>{{ status }}</td>
+</tr>
+{% endfor %}
+</table>
+<br><a href="/">返回上传页</a>
+</body>
+</html>
